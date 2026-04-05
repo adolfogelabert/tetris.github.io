@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris en HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tetris</h1>
+    <div class="main-layout">
+        <canvas id="tetris" width="240" height="400"></canvas>
+        <div class="next-container">
+            <span class="next-label">Siguiente:</span>
+            <canvas id="next" width="80" height="80"></canvas>
+        </div>
+    </div>
+    <div class="controls button-group">
+        <button id="resetBtn">Reiniciar Juego</button>
+        <button id="pauseBtn">Pausar</button>
+    </div>
+    <div class="score-container">
+        <span>Puntaje: </span><span id="score">0</span>
+    </div>
+    <div class="timer-container">
+        <span>Tiempo: </span><span id="timer">00:00</span>
+    </div>
+    <!-- Modal de selección de dificultad -->
+    <div id="difficultyModal" class="modal">
+        <div class="modal-content">
+            <h2>Selecciona la dificultad</h2>
+            <button class="difficulty-btn" data-difficulty="easy">Fácil</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medio</button>
+            <button class="difficulty-btn" data-difficulty="hard">Difícil</button>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
